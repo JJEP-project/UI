@@ -31,3 +31,7 @@
 * {
     transition: all 0.2s ease-in-out;
 }
+
+.font-home {
+    font-family: 'Work Sans', sans-serif;
+}
