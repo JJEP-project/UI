@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>JJEP</title>
+    <link href="../global.css" rel="stylesheet">
+    <script src="../tailwind.config.js">
+    </script>
+</head>
+<body>
+<div class="relative min-h-screen md:flex" data-dev-hint="container">
+    <input class="hidden" id="menu-open" type="checkbox"/>
+
+    <header class="flex justify-between md:hidden" data-dev-hint="mobile menu bar">
+        <span></span>
+        <label class="mr-4 mt-2 p-2 shadow-lg rounded-full p-2 text-gray-600 md:hidden text-primary" for="menu-open"
+               id="mobile-menu-button">
+            <svg class="h-6 w-6 transition duration-200 ease-in-out" fill="none"
+                 id="menu-open-icon" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </svg>
+            <svg class="h-6 w-6 transition duration-200 ease-in-out" fill="none"
+                 id="menu-close-icon" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </svg>
+        </label>
+    </header>
+
+    <aside class="border bg-white md:w-64 w-3/4 space-y-6 pt-6 px-0 absolute inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col md:justify-between overflow-y-auto"
+           data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation"
+           id="sidebar">
+        <div class="flex flex-col space-y-6" data-dev-hint="optional div for having an extra footer navigation">
+            <a class="text-white flex items-center space-x-2 px-4" href="#">
+                <span class="text-2xl font-extrabold text-gray-800">JJEP</span>
+            </a>
+
+            <nav class="px-4" data-dev-hint="main navigation">
+                <a class="bg-primary text-white rounded-xl my-2 flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-primary-hover"
+                   href="/admin/index.html">
+                    <span>Home</span>
+                </a>
+                <a class="rounded-xl my-2 flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-200"
+                   href="/admin/users.html">
+                    <span>Customers</span>
+                </a>
+            </nav>
+        </div>
+    </aside>
+
+    <main class="flex-1 w-full bg-gray-50 h-screen">
+        <div class="border-b p-4 bg-white flex flex-row justify-between items-center text-primary">
+            <h1 class="font-medium text-2xl">Home</h1>
+            <h5>Hi Jalol, Mirislomov</h5>
+        </div>
+        <!--    content    -->
+        <div class="max-w-7xl mx-auto p-4">
+            <!-- replace -->
+            <div class="bg-white rounded-xl border flex flex-col md:flex-row p-4 justify-start">
+
+                <div class="flex flex-col flex-1 mb-8">
+                    <h1 class="font-semibold">
+                        Application details
+                    </h1>
+                    <p class="text-gray-500">
+                        Description
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 flex-1 lg:mr-32">
+
+                    <!-- 2 columns in 1 row -->
+                    <div class="md:m-0">
+                        <label class="block text-sm font-medium text-gray-900">Blood protection</label>
+                        <div class="mt-2">
+                            <h3 class="border border-gray-300 px-4 py-2 rounded-xl block w-full">
+                                Yes
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="md:m-0">
+                        <label class="block text-sm font-medium text-gray-900">Generational IHT</label>
+                        <div class="mt-2">
+                            <h3 class="border border-gray-300 px-4 py-2 rounded-xl block w-full">
+                                No
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- additional any kind of UI -->
+                    <div class="md:m-0 col-span-full flex flex-row justify-end items-center space-x-4">
+                        <!-- content -->
+                        <a href="#" class="px-4 py-2 rounded-xl text-link hover:bg-link-back_hover">Show User</a>
+                    </div>
+
+                </div>
+            </div>
+            <!-- End replace -->
+        </div>
+    </main>
+</div>
+</body>
+</html>

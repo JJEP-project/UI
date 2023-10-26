@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>JJEP</title>
+    <link href="../global.css" rel="stylesheet">
+    <script src="../tailwind.config.js">
+    </script>
+</head>
+<body>
+<div class="relative min-h-screen md:flex" data-dev-hint="container">
+    <input class="hidden" id="menu-open" type="checkbox"/>
+
+    <header class="flex justify-between md:hidden" data-dev-hint="mobile menu bar">
+        <span></span>
+        <label class="mr-4 mt-2 p-2 shadow-lg rounded-full p-2 text-gray-600 md:hidden text-primary" for="menu-open"
+               id="mobile-menu-button">
+            <svg class="h-6 w-6 transition duration-200 ease-in-out" fill="none"
+                 id="menu-open-icon" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </svg>
+            <svg class="h-6 w-6 transition duration-200 ease-in-out" fill="none"
+                 id="menu-close-icon" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </svg>
+        </label>
+    </header>
+
+    <aside class="border bg-white md:w-64 w-3/4 space-y-6 pt-6 px-0 absolute inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col md:justify-between overflow-y-auto"
+           data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation"
+           id="sidebar">
+        <div class="flex flex-col space-y-6" data-dev-hint="optional div for having an extra footer navigation">
+            <a class="text-white flex items-center space-x-2 px-4" href="#">
+                <span class="text-2xl font-extrabold text-gray-800">JJEP</span>
+            </a>
+
+            <nav class="px-4" data-dev-hint="main navigation">
+                <a class="rounded-xl my-2 flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-200"
+                   href="/admin/index.html">
+                    <span>Home</span>
+                </a>
+                <a class="bg-primary text-white rounded-xl my-2 flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-primary-hover"
+                   href="/admin/users.html">
+                    <span>Customers</span>
+                </a>
+
+            </nav>
+        </div>
+    </aside>
+
+    <main class="flex-1 w-full bg-gray-50 h-screen">
+        <div class="border-b p-4 bg-white flex flex-row justify-between items-center text-primary">
+            <h1 class="font-medium text-2xl">JJEP</h1>
+            <h5>Hi Jalol, Mirislomov</h5>
+        </div>
+        <!--    content    -->
+        <div class="max-w-7xl mx-auto p-4">
+            <!-- replace -->
+            <div class="m-4">
+                <div class="bg-white rounded-xl border w-full p-3 text-sm flex flex-col space-y-4">
+                    <div class="flex flex-row justify-between items-center">
+                        <h3 class="text-xl">Applications</h3>
+                        <div class="flex flex-row justify-end space-x-4">
+                            <button class="px-4 py-2 text-primary hover:bg-gray-100 rounded-xl" type="button">
+                                Sort
+                            </button>
+                            <button class="px-4 py-2 bg-primary text-white hover:bg-primary-hover rounded-xl"
+                                    type="submit">
+                                Add Application
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- applications -->
+                    <div class="overflow-x-auto">
+                        <table class="table-auto w-full divide-y whitespace-nowrap">
+                            <thead class="h-10">
+                            <tr>
+                                <th class="whitespace-nowrap">
+                                    <div class="font-medium text-left">ID</div>
+                                </th>
+                                <th class="whitespace-nowrap">
+                                    <div class="font-medium text-left">User's name</div>
+                                </th>
+                                <th class="whitespace-nowrap">
+                                    <div class="font-medium text-left">Created at</div>
+                                </th>
+                                <th class="whitespace-nowrap">
+                                    <div class="font-medium text-left">Updated at</div>
+                                </th>
+                                <th class="whitespace-nowrap">
+                                    <div class="font-medium text-left">Actions</div>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody class="divide-y">
+                            <tr class="h-10">
+                                <td>
+                                    1
+                                </td>
+                                <td>
+                                    Damir Valiev
+                                </td>
+                                <td>
+                                    2021-09-09 12:00
+                                </td>
+                                <td>
+                                    2021-09-09 12:00
+                                </td>
+                                <td>
+                                    <div class="flex flex-row space-x-2">
+                                        <button class="bg-blue-500 py-1 px-2 rounded-full text-white">
+                                            Edit
+                                        </button>
+                                        <button class="bg-red-500 py-1 px-2 rounded-full text-white">
+                                            Delete
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /End replace -->
+        </div>
+    </main>
+</div>
+</body>
+</html>
